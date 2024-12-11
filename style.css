@@ -1,0 +1,278 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: all .2s linear;
+}
+
+body {
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+.navbar {
+    display: inline-block; /* Menyesuaikan lebar box dengan isi */
+    padding: 10px 20px; /* Atur padding horizontal dan vertikal */
+    background-color: #ff7300eb; /* Warna oranye */
+    color: #fff; /* Warna teks */
+    border-radius: 10px; /* Opsional: sudut membulat */
+    font-size: 24px; /* Ukuran font */
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.logo-image {
+    position: absolute;
+    top: 10px; /* Geser sedikit ke bawah */
+    left: 20px; /* Tempatkan di pojok kiri */
+    width: 70px; /* Sesuaikan ukuran logo */
+    height: auto; /* Pertahankan aspek rasio */
+    z-index: 2; /* Pastikan di atas header */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1rem;
+    color: #21007a;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    margin: auto 100px auto auto; /* Tambahkan jarak agar search bar tidak bertumpuk */
+    width: 50%; /* Sesuaikan lebar search bar jika diperlukan */
+    padding: 10px;
+    border: 2px solid #ccc; /* Opsional: buat lebih estetis */
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.search-bar .material-symbols-outlined {
+    position: absolute;
+    left: 10px;
+    color: #191097;
+    font-size: 24px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; 
+    border: 1px solid #1b0980;
+    border-radius: 5px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    display: inline-block;
+    background-color: transparent; 
+    border: 1px solid #200fbb; 
+    color: #2f2db8;
+    padding: 10px 20px;
+    margin: 5px; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+    text-decoration: none;
+    text-align: center;
+}
+
+.category-btn:hover, .category-btn:focus {
+    background-color: #2f2db8; 
+    color: #fff; 
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin: 10px;
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+
+}
+
+.category-label {
+    display: inline-block;
+    background-color: #e2e0ff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+}
+
+.post-info {
+    display: block;
+    font-size: 0.8rem;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.card-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card-content a {
+    color: #fafafa;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #ff0000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+.card-content a:hover{
+    background-color: #660a0a;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+}
+
+.load-more {
+    background-color: #1e128a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.load-more:hover {
+    background-color: #14005a;
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-content p {
+        font-size: 0.9rem;
+    }
+
+    .search-bar {
+        width: 80%; 
+    }
+
+    .card {
+        width: calc(100% - 20px); 
+    }
+
+    .card-content h2 {
+        font-size: 1rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
+
+    .category-btn {
+        padding: 8px 16px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.2rem;
+    }
+
+    .header-content p {
+        font-size: 0.8rem;
+    }
+
+    .search-bar {
+        width: 100%; 
+    }
+
+    .category-btn {
+        padding: 6px 12px; 
+        font-size: 0.8rem; 
+    }
+}
